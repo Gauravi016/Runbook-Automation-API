@@ -1,0 +1,119 @@
+/* Modern Dark Theme - CSS Variables */
+
+:root {
+  /* Primary Colors */
+  --bg-primary: #0F172A;
+  --bg-secondary: #111827;
+  --bg-tertiary: #1E293B;
+  
+  --card-bg: #1E293B;
+  --card-hover: #334155;
+  
+  --text-primary: #F8FAFC;
+  --text-secondary: #94A3B8;
+  --text-tertiary: #64748B;
+  
+  --border-color: #374151;
+  --border-light: #2D3748;
+  
+  /* Accent Colors */
+  --success: #22C55E;
+  --primary: #3B82F6;
+  --warning: #F59E0B;
+  --failed: #EF4444;
+  --scheduled: #8B5CF6;
+  --running: #06B6D4;
+  
+  /* Header & Sidebar */
+  --header-bg: #111827;
+  --header-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  
+  --sidebar-bg: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+  --sidebar-text: #F8FAFC;
+  --sidebar-hover: rgba(59, 130, 246, 0.1);
+  
+  /* Cards */
+  --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  --card-hover-shadow: 0 12px 48px rgba(59, 130, 246, 0.2);
+  
+  /* Input */
+  --input-bg: #1E293B;
+  --input-border: #374151;
+  --input-text: #F8FAFC;
+  --input-placeholder: #64748B;
+  
+  /* Button */
+  --btn-primary-bg: #3B82F6;
+  --btn-primary-hover: #2563EB;
+  --btn-logout-bg: #EF4444;
+  --btn-logout-hover: #DC2626;
+  --btn-toggle-hover: #334155;
+}
+
+/* Google Font - Inter */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* Global Styles */
+* {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+}
+
+a {
+  color: var(--text-primary);
+  text-decoration: none;
+}
+
+button {
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+input, select, textarea {
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  border: 1px solid var(--input-border);
+  border-radius: 8px;
+  padding: 10px 12px;
+  font-family: inherit;
+  transition: all 0.2s ease;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+input::placeholder, select::placeholder, textarea::placeholder {
+  color: var(--input-placeholder);
+}
+
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-tertiary);
+}
